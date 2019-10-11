@@ -19,13 +19,20 @@ export const getSmurfs = () => dispatch => {
     });
 };
 
-export const giveSmurf = () => dispatch => {
-  const newSmurf = {
-    name: 'test'
-  }
+export const giveSmurf = (newSmurf) => dispatch => {
   axios
-    .push(smurfApi, newSmurf)
-}
+    .post(smurfApi, newSmurf)
+    .then(response => {
+      console.log(response)
+      dispatch({
+        type: types.EXPORT_NEW_SMURF,
+        payload: response.data
+      })
+    })
+    .catch(err => {
+      console.log(err);
+    });
+};
 
 export function changeInput(target) {
   return {
