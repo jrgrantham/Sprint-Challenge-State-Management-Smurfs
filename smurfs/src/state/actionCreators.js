@@ -18,3 +18,13 @@ export const getSmurfs = () => dispatch => {
       console.log(err);
     });
 };
+
+export function changeInput(target) {
+  return {
+    type: types.ON_INPUT_CHANGE,
+    payload: {
+      name: target.name,
+      value: target.value,
+    },
+  };
+}

@@ -16,6 +16,14 @@ export function smurfReducer(state = initialState, action) {
         ...state,
         allSmurfs: action.payload
       };
+    case actionTypes.ON_INPUT_CHANGE:
+      return {
+        ...state,
+        newSmurfForm: {
+          ...state,
+          [action.payload.name]: action.payload.value,
+        }
+      }
     default:
       return state;
   }
