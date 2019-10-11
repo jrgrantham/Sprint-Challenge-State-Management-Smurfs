@@ -1,3 +1,3 @@
 export const IMPORT_SMURFS = 'IMPORT_SMURFS';
 export const ADD_NEW_SMURF = 'ADD_NEW_SMURF';
-
+export const ON_INPUT_CHANGE = 'ON_INPUT_CHANGE';

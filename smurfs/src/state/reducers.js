@@ -3,9 +3,9 @@ import * as actionTypes from "./actionTypes";
 const initialState = {
   allSmurfs: [],
   newSmurfForm: {
-    fname: '',
-    lname: '',
+    name: '',
     height: '',
+    age: '',
   }
 }
 
