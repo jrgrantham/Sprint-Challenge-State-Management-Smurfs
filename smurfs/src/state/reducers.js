@@ -6,8 +6,6 @@ export function smurfReducer(state = initialSmurfs, action) {
   switch (action.type) {
     case actionTypes.IMPORT_SMURFS:
       return action.payload
-    case actionTypes.EXPORT_NEW_SMURF:
-      return [...action.payload]
     default:
       return state;
   }

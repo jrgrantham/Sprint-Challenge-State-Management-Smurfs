@@ -14,9 +14,9 @@ const AllSmurfs = props => {
         {props.smurfs.map(smurf => {
           return (
             <div className="" key={smurf.id}>
-              <div className='cardInfo'>
-                <h4>{smurf.name}</h4>
-              </div>
+              <h4>
+                {smurf.name}, {smurf.height}, {smurf.age}
+              </h4>
             </div>
           );
         })}

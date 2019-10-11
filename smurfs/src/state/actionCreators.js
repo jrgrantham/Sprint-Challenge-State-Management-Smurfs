@@ -25,9 +25,10 @@ export const giveSmurf = (newSmurf) => dispatch => {
     .then(response => {
       console.log(response)
       dispatch({
-        type: types.EXPORT_NEW_SMURF,
+        type: types.IMPORT_SMURFS,
         payload: response.data
       })
+      // function to clear the form required
     })
     .catch(err => {
       console.log(err);
