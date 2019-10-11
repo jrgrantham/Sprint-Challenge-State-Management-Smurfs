@@ -10,7 +10,7 @@ export function SmurfForm({ form, changeInput, giveSmurf }) {
 
   const onFormSubmit = event => {
     event.preventDefault();
-    giveSmurf();
+    giveSmurf(form);
   };
 
   return (
