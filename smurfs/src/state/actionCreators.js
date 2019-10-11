@@ -19,6 +19,14 @@ export const getSmurfs = () => dispatch => {
     });
 };
 
+export const giveSmurf = () => dispatch => {
+  const newSmurf = {
+    name: 'test'
+  }
+  axios
+    .push(smurfApi, newSmurf)
+}
+
 export function changeInput(target) {
   return {
     type: types.ON_INPUT_CHANGE,

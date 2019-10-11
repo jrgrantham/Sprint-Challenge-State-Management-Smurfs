@@ -2,14 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as actionCreators from '../state/actionCreators';
 
-export function Form({ formValues, changeInput }) {
+export function SmurfForm({ form, changeInput, giveSmurf }) {
+  
   const onValueChange = event => {
     changeInput(event.target);
   };
 
   const onFormSubmit = event => {
     event.preventDefault();
-    alert(`submitting`);
+    giveSmurf();
   };
 
   return (
@@ -17,6 +18,8 @@ export function Form({ formValues, changeInput }) {
       <label>Name
         <input
           name='name'
+          value={form.name}
+          onChange={onValueChange}
           placeholder='enter name'
         />
       </label><br />
@@ -24,6 +27,8 @@ export function Form({ formValues, changeInput }) {
       <label>Height
         <input
           name='height'
+          value={form.height}
+          onChange={onValueChange}
           placeholder='enter height'
         />
       </label><br />
@@ -31,6 +36,8 @@ export function Form({ formValues, changeInput }) {
       <label>Age
         <input
           name='age'
+          value={form.age}
+          onChange={onValueChange}
           placeholder='enter age'
         />
       </label><br />
@@ -43,4 +50,4 @@ export function Form({ formValues, changeInput }) {
 export default connect(
   state => state,
   actionCreators,
-)(Form);
+)(SmurfForm);

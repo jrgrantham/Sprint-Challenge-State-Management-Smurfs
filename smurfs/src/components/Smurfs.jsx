@@ -11,7 +11,7 @@ const AllSmurfs = props => {
     <div className="">
       <h2>All Smurfs</h2>
       <div>
-        {props.smurfs.allSmurfs.map(smurf => {
+        {props.smurfs.map(smurf => {
           return (
             <div className="" key={smurf.id}>
               <div className='cardInfo'>

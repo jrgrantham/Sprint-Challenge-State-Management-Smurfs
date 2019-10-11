@@ -5,10 +5,11 @@ import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import "./index.css";
 import App from "./components/App";
-import { smurfReducer } from './state/reducers'
+import { smurfReducer, formReducer } from './state/reducers'
 
 const monsterReducer = combineReducers({
   smurfs: smurfReducer,
+  form: formReducer,
 })
 
 const store = createStore(
